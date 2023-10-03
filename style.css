@@ -1,0 +1,134 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+        background-image: url(/image/thumb-1920-1181584.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+}
+
+.container {
+    flex: 1;
+}
+.logo{
+    width: 700px;
+
+    animation-name: logoOpacity;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: 2s;
+
+
+}
+.waviy {
+    position: relative;
+    
+  }
+  .waviy{
+    animation: moveData 5s 1;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: rgb(254, 254, 254);
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+  @keyframes logoOpacity {
+     0% {
+          opacity: 0;
+     }
+     50% {
+          opacity: 0.5;
+     }
+     100% {
+         opacity: 1;
+        }
+  }
+  
+  @keyframes moveData {
+      0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+    
+	38% {
+        animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+        animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+    
+	72% {
+        animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+        animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+        animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+    
+	100% {
+        animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+.data{
+    font-size: 80px;
+    color: red;
+    animation: showData 1s 1 5s forwards ;
+    
+    opacity: 0;
+
+
+  
+}
+
+
+
+@keyframes showData {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
